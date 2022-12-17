@@ -1,0 +1,420 @@
+{
+  "optativas": [
+    {
+      "id": "LIBR",
+      "nome": "LIBRAS",
+      "carga_horaria": 40,
+      "eixo": "FHS"
+    },
+    {
+      "id": "ETCA",
+      "nome": "ÉTICA, TECNOLOGIA E SOCIEDADE",
+      "carga_horaria": 40,
+      "eixo": "FHS"
+    },
+    {
+      "id": "DIRD",
+      "nome": "DIREITO DIGITAL",
+      "carga_horaria": 40,
+      "eixo": "FHS"
+    },
+    {
+      "id": "PINT",
+      "nome": "PROPRIEDADE INTELECTUAL (EAD)",
+      "carga_horaria": 40,
+      "eixo": "FHS"
+    },
+    {
+      "id": "NEGS",
+      "nome": "NEGÓCIOS SOCIAIS",
+      "carga_horaria": 40,
+      "eixo": "FHS"
+    },
+    {
+      "id": "EDFI",
+      "nome": "EDUCAÇÃO FINANCEIRA",
+      "carga_horaria": 40,
+      "eixo": "FHS"
+    },
+    {
+      "id": "GEPJ",
+      "nome": "GERÊNCIA DE PROJETO",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "QDSW",
+      "nome": "QUALIDADE DE SOFTWARE",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "SINT",
+      "nome": "SISTEMAS INTELIGENTES",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "GCMS",
+      "nome": "GESTÃO DE CONFIGURAÇÃO SOFTWARE",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "PDSI",
+      "nome": "PROCESSAMENTO DIGITAL DE SINAIS E IMAGENS",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "PASW",
+      "nome": "PROJETO AVANÇADO DE SOFTWARE",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "ARQS",
+      "nome": "ARQUITETURA DE SOFTWARE",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "INTC",
+      "nome": "INTELIGÊNCIA COMPUTACIONAL",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "AGIL",
+      "nome": "METODOLOGIAS ÁGEIS",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "FABS",
+      "nome": "FÁBRICA DE SOFTWARE",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "PGMV",
+      "nome": "PROGRAMAÇÃO PARA DISPOSITIVOS MÓVEIS",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "PESO",
+      "nome": "PESQUISA OPERACIONAL",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "GCPT",
+      "nome": "GERÊNCIA DE REDES DE COMPUTADORES",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "SEGR",
+      "nome": "SEGURANÇA DE REDES",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "INFR",
+      "nome": "PROJETO DE INFRAESTRUTURA",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "CFOR",
+      "nome": "COMPUTAÇÃO FORENSE",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "LSOR",
+      "nome": "LABORATÓRIO DE SISTEMAS OPERACIONAIS E REDES",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "ADER",
+      "nome": "AVALIAÇÃO DE DESEMPENHO DE REDES",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "IDCO",
+      "nome": "INTERNET DAS COISAS",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "DEVO",
+      "nome": "DEVOPS",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "GPPR",
+      "nome": "GESTÃO POR PROCESSOS",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "GECO",
+      "nome": "GESTÃO DO CONHECIMENTO",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "CDON",
+      "nome": "CIÊNCIA DE DADOS ORIENTADA À NEGÓCIOS",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "CORG",
+      "nome": "COMPORTAMENTO ORGANIZACIONAL",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "MKCE",
+      "nome": "MARKETING E COMÉRCIO ELETRÔNICO",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    },
+    {
+      "id": "GETI",
+      "nome": "GESTÃO ESTRATÉGICA DE TI",
+      "carga_horaria": 80,
+      "eixo": "FPF"
+    }
+  ],
+  "obrigatorias": [
+    {
+      "id": "FNSI",
+      "nome": "FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO",
+      "carga_horaria": 80,
+      "eixo": "FB"
+    },
+    {
+      "id": "FNSI",
+      "nome": "ALGORITMOS E LÓGICA DE PROGRAMAÇÃO",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "INTW",
+      "nome": "INTRODUÇÃO ÀS TECNOLOGIAS WEB (EAD)",
+      "carga_horaria": 40,
+      "eixo": "FPG"
+    },
+    {
+      "id": "FNMT",
+      "nome": "FUNDAMENTOS DA MATEMÁTICA",
+      "carga_horaria": 80,
+      "eixo": "FB"
+    },
+    {
+      "id": "INGT",
+      "nome": "INGLÊS TÉCNICO",
+      "carga_horaria": 80,
+      "eixo": "FB"
+    },
+    {
+      "id": "FILO",
+      "nome": "FILOSOFIA",
+      "carga_horaria": 80,
+      "eixo": "FHS"
+    },
+    {
+      "id": "ILGM",
+      "nome": "INTRODUÇÃO À LÓGICA MATEMÁTICA",
+      "carga_horaria": 40,
+      "eixo": "FB"
+    },
+    {
+      "id": "MATD",
+      "nome": "MATEMÁTICA DISCRETA",
+      "carga_horaria": 40,
+      "eixo": "FB"
+    },
+    {
+      "id": "FNGO",
+      "nome": "FUNDAMENTOS DA GESTÃO ORGANIZACIONAL",
+      "carga_horaria": 80,
+      "eixo": "FB"
+    },
+    {
+      "id": "ARQC",
+      "nome": "ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "LNPG",
+      "nome": "LINGUAGEM DE PROGRAMAÇÃO",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "SCOG",
+      "nome": "SOCIOLOGIA DAS ORGANIZAÇÕES",
+      "carga_horaria": 80,
+      "eixo": "FHS"
+    },
+    {
+      "id": "ESTA",
+      "nome": "ESTATÍSTICA APLICADA",
+      "carga_horaria": 80,
+      "eixo": "FB"
+    },
+    {
+      "id": "FNBD",
+      "nome": "FUNDAMENTOS DE BANCO DE DADOS",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "SOPE",
+      "nome": "SISTEMAS OPERACIONAIS",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "ESTD",
+      "nome": "ESTRUTURA DE DADOS",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "METC",
+      "nome": "METODOLOGIA CIENTÍFICA",
+      "carga_horaria": 80,
+      "eixo": "FB"
+    },
+    {
+      "id": "INHC",
+      "nome": "INTERAÇÃO HUMANO-COMPUTADOR",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "APBD",
+      "nome": "ADMINISTRAÇÃO E PROJETO DE BANCO DE DADOS",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "FNRC",
+      "nome": "FUNDAMENTOS DE REDES DE COMPUTADORES",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "PROO",
+      "nome": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "GPTI",
+      "nome": "GESTÃO DE PESSOAS EM TECNOLOGIA DA INFORMAÇÃO",
+      "carga_horaria": 40,
+      "eixo": "FB"
+    },
+    {
+      "id": "GOTI",
+      "nome": "GOVERNANÇA EM TECNOLOGIA DA INFORMAÇÃO",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "TABD",
+      "nome": "TÓPICOS AVANÇADOS DE BANCO DE DADOS",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "PINT1",
+      "nome": "PROJETO INTEGRADOR (EAD)",
+      "carga_horaria": 40,
+      "eixo": "EXT"
+    },
+    {
+      "id": "PWEB",
+      "nome": "PROGRAMAÇÃO WEB",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "APSI",
+      "nome": "ANÁLISE E PROJETO DE SISTEMAS DE INFORMAÇÃO",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "EMPD",
+      "nome": "EMPREENDEDORISMO DIGITAL",
+      "carga_horaria": 80,
+      "eixo": "FB"
+    },
+    {
+      "id": "PJSI",
+      "nome": "PROJETO INTEGRADOR EM SISTEMAS DE INFORMAÇÃO",
+      "carga_horaria": 80,
+      "eixo": "EXT"
+    },
+    {
+      "id": "PDSW",
+      "nome": "PROCESSOS DE DESENVOLVIMENTO DE SOFTWARE",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "GESI",
+      "nome": "GESTÃO DA SEGURANÇA DA INFORMAÇÃO",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "PPAP",
+      "nome": "PROJETO DE PESQUISA APLICADA",
+      "carga_horaria": 40,
+      "eixo": "FB"
+    },
+    {
+      "id": "SIGE",
+      "nome": "SISTEMAS DE INFORMAÇÃO GERENCIAIS",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    },
+    {
+      "id": "TOSI",
+      "nome": "TÓPICOS ESPECIAIS EM SISTEMAS DE INFORMAÇÃO",
+      "carga_horaria": 40,
+      "eixo": "FPG"
+    },
+    {
+      "id": "PSIF",
+      "nome": "PESQUISA EM SISTEMAS DE INFORMAÇÃO",
+      "carga_horaria": 40,
+      "eixo": "FB"
+    },
+    {
+      "id": "TSAS",
+      "nome": "TECNOLOGIAS SOCIAIS E ASSISTIVAS",
+      "carga_horaria": 40,
+      "eixo": "EXT"
+    },
+    {
+      "id": "SADE",
+      "nome": "SISTEMAS DE APOIO À DECISÃO",
+      "carga_horaria": 80,
+      "eixo": "FPG"
+    }
+  ]
+}
