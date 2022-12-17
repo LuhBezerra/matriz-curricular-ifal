@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
-
 import { Header } from "./components/header";
 import { Home } from "./components/home";
 
@@ -12,10 +11,13 @@ ChartJS.register(ArcElement, Tooltip);
 const CARGA_HORARIA_TOTAL = cargaHoraria;
 
 function App() {
-  const [cargaHorariaRestante, setCargaHorariaRestante] =
-    useState(CARGA_HORARIA_TOTAL);
+  const [cargaHorariaRestante, setCargaHorariaRestante] = useState(
+    JSON.parse(localStorage.getItem("cargaHoraria")) || CARGA_HORARIA_TOTAL
+  );
 
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useState(
+    JSON.parse(localStorage.getItem("disciplinas")) || []
+  );
 
   const obrigatorias = disciplinas.obrigatorias.map((item) => ({
     value: item.id,
@@ -43,7 +45,9 @@ function App() {
       [diciplina.eixo]:
         action === "sum"
           ? prevState[diciplina.eixo] + diciplina.carga_horaria
-          : prevState[diciplina.eixo] - diciplina.carga_horaria,
+          : prevState[diciplina.eixo] - diciplina.carga_horaria > 0
+          ? prevState[diciplina.eixo] - diciplina.carga_horaria
+          : 0,
     }));
   };
 
@@ -65,6 +69,16 @@ function App() {
     handleCargaHoraria(diciplina, "sum");
   };
 
+  const onClear = () => setSelectedOptions([])
+
+  useEffect(() => {
+    window.localStorage.setItem(
+      "cargaHoraria",
+      JSON.stringify(cargaHorariaRestante)
+    );
+    window.localStorage.setItem("disciplinas", JSON.stringify(selectedOptions));
+  }, [cargaHorariaRestante, selectedOptions]);
+
   return (
     <main className="w-screen h-screen overflow-hidden	">
       <Header selectOptions={filteredOptions} onSelectChange={handleOnChange} />
@@ -72,6 +86,7 @@ function App() {
         selectedOptions={selectedOptions}
         cargaHorariaRestante={cargaHorariaRestante}
         onDeleteDisciplina={onDeleteDisciplina}
+        onClear={onClear}
       />
     </main>
   );

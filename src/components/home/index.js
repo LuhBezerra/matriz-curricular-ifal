@@ -24,6 +24,7 @@ export const Home = ({
   cargaHorariaRestante,
   selectedOptions,
   onDeleteDisciplina,
+	onClear
 }) => {
   const { height } = useWindowSize();
 
@@ -66,15 +67,23 @@ export const Home = ({
     >
       <div className="flex-col max-w-[90rem] w-full flex h-full flex lg:flex-row lg:items-center lg:justify-center gap-10 overflow-y-auto">
         <div className="p-4 w-full lg:py-6 lg:pr-14 lg:pl-6 bg-slate-50 lg:w-[46%] lg:h-full rounded-lg  lg:overflow-y-auto">
-          <h2 className="text-3xl font-bold text-zinc-600 pb-4">Disciplinas</h2>
+          <div className="flex justify-between">
+            <h2 className="text-3xl font-bold text-zinc-600 pb-4">
+              Disciplinas
+            </h2>
+            <button className="text-red-400 pb-3 hover:text-red-800" onClick={onClear}>Limpar tudo</button>
+          </div>
           {!selectedOptions.length && (
             <div className="pb-12 flex flex-col justify-center items-center text-slate-300 h-[90%]">
-              <InboxIcon className="h-28 text-slate-200" />
+              <InboxIcon className="h-28 w-28 text-slate-200" />
               Nenhuma disciplina selecionada
             </div>
           )}
-          {selectedOptions.map((item) => (
-            <div className="flex justify-between items-center pb-4 mb-4 border-b-2 border-dashed">
+          {selectedOptions.map((item, index) => (
+            <div
+              key={`${item.id}-${index}`}
+              className="flex justify-between items-center pb-4 mb-4 border-b-2 border-dashed"
+            >
               <div>
                 <p>Código: {item.id}</p>
                 <p>Nome: {item.nome}</p>
@@ -98,14 +107,14 @@ export const Home = ({
 
           <table>
             {Object.values(cargaHorariaRestante).map((item, index) => (
-              <>
+              <tbody key={index}>
                 <tr>
                   <th className="text-left	">{CARGA_HORARIA_NAMES[index]}</th>
                 </tr>
                 <tr>
                   <td>{item}h</td>
                 </tr>
-              </>
+              </tbody>
             ))}
           </table>
         </div>

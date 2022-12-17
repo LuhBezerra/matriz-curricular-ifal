@@ -19,7 +19,7 @@ export const Header = ({ selectOptions, onSelectChange }) => {
         size="large"
         showSearch
         className="mb-[-2.3rem] w-full lg:w-[47.6rem]"
-        placeholder="Search to Select"
+        placeholder="Selecione uma disciplina"
         optionFilterProp="children"
         filterOption={onFilterOption}
         filterSort={onFilterSort}
