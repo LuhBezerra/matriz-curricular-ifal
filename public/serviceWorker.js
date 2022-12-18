@@ -2,12 +2,10 @@
 const CACHE_NAME = "version-1";
 const urlsToCache = [
   "/",
-  "/favicon.ico",
-  "manifest,json",
-  "/serviceWorker.js",
-  "/index.html",
-  "/static/js/main.b0591feb.js",
-  "/static/css/main.80719e2d.css",
+  "index.html",
+  "static/js/main.chunck.js",
+  "static/js/0.chunck.js",
+  "static/js/bundle.js",
 ];
 const self = this;
 
@@ -26,7 +24,9 @@ self.addEventListener("install", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((res) => {
-      return fetch(event.request).catch(() => caches.match("offline.html"));
+      if (res) {
+        return res
+      }
     })
   );
 });
