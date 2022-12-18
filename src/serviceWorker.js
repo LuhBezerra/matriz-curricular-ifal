@@ -1,6 +1,14 @@
 //STORAGE OF BROWSER
 const CACHE_NAME = "version-1";
-const urlsToCache = ["index.html", "offline.html"];
+const urlsToCache = [
+  "/",
+  "/favicon.ico",
+  "manifest,json",
+  "/serviceWorker.js",
+  "/index.html",
+  "/static/js/main.b0591feb.js",
+  "/static/css/main.80719e2d.css",
+];
 const self = this;
 
 //installation
@@ -25,15 +33,18 @@ self.addEventListener("fetch", (event) => {
 
 // activate the service worker
 self.addEventListener("activate", (event) => {
-    const cacheWhitelist = [];
-    cacheWhitelist.push(CACHE_NAME);
-    event.waitUntil(
-        caches.keys().then((cacheNames) => Promise.all(
-            cacheNames.map((cacheName) => {
-                if(!cacheWhitelist.includes(cacheName)){
-                    return caches.delete(cacheName);
-                }
-            })
-        ))
+  const cacheWhitelist = [];
+  cacheWhitelist.push(CACHE_NAME);
+  event.waitUntil(
+    caches.keys().then((cacheNames) =>
+      Promise.all(
+        cacheNames.map((cacheName) => {
+          if (!cacheWhitelist.includes(cacheName)) {
+            return caches.delete(cacheName);
+          }
+          return "";
+        })
+      )
     )
+  );
 });

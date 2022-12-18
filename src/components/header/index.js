@@ -12,7 +12,7 @@ export const Header = ({ selectOptions, onSelectChange }) => {
   return (
     <header className="w-full p-4 bg-green-600 h-28 flex flex-col items-center justify-between">
       <h1 className="lg:mt-4 text-xl text-center lg:text-3xl font-bold text-white">
-        Carga horaria - Sistemas de Informação / IFAL Maceió
+        Carga horária - Sistemas de Informação / IFAL Maceió
       </h1>
       <Select
         autoClearSearchValue
