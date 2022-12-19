@@ -6,7 +6,7 @@ const urlsToCache = [
   "static/js/main.chunck.js",
   "static/js/0.chunck.js",
   "static/js/bundle.js",
-  "static/js/main.b0591feb.js"
+  "static/js/*.js"
 ];
 const self = this;
 
