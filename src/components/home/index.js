@@ -104,7 +104,7 @@ export const Home = ({
         <div className="hidden absolute rounded-lg bg-[#F3F3F3] lg:block">
           <ArrowLongRightIcon className="text-green-600	h-20 w-28" />
         </div>
-        <div className="p-4 pr-0 w-full lg:py-6 lg:pl-14 bg-slate-50	lg:w-[46%]	lg:h-full rounded-lg overflow-hidden">
+        <div className="p-4 pr-0 w-full lg:py-6 lg:pl-14 bg-slate-50 lg:w-[46%] h-auto lg:h-full rounded-lg lg:overflow-hidden">
           <h2 className="text-3xl font-bold text-zinc-600 pb-6">
             Carga horária restante
           </h2>
