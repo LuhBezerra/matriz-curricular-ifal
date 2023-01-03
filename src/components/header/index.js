@@ -50,10 +50,10 @@ export const Header = ({ selectOptions, onSelectChange }) => {
         Carga horária - Sistemas de Informação / IFAL Maceió
       </h1>
       <button
-        className="absolute bg-white h-12 w-12 right-4 lg:right-10 bottom-10 rounded-full"
+        className="absolute bg-transparent h-16 w-16 right-4 lg:right-10 bottom-10 rounded-full"
         onClick={info}
       >
-        <InformationCircleIcon className="text-green-500 hover:text-green-600"/>
+        <InformationCircleIcon className="text-green-500 h-12 w-12 hover:text-green-600"/>
       </button>
       <Select
         autoClearSearchValue

@@ -92,7 +92,7 @@ export const Home = ({
               className="flex justify-between items-center pb-4 mb-4 border-b-2 border-dashed"
             >
               <div>
-                <p className="text-slate-400">‣ {item.id}</p>
+                <p className="text-slate-400">‣ {item.id} ({item.eixo})</p>
                 <p>{item.nome} ({item.carga_horaria}h)</p>
               </div>
               <button className="h-4 w-4" onClick={onDeleteDisciplina(item.id)}>
