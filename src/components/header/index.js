@@ -18,7 +18,7 @@ export const Header = ({ selectOptions, onSelectChange }) => {
           <strong>Sobre</strong>
           <p>
             A aplicação foi idealizada no intuito de ajudar alunos
-            desperiodizados que tem dificuldade em saber quais disciplinas estão
+            desperiodizados que possuem dificuldade em saber quais disciplinas estão
             restando para finalizar a carga horária total
           </p>
           <br />
