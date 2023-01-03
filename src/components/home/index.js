@@ -108,7 +108,7 @@ export const Home = ({
           <h2 className="text-3xl font-bold text-zinc-600 pb-6">
             Carga horária restante
           </h2>
-          <div className="w-full h-[92%] overflow-auto pr-4">
+          <div className="w-full h-[92%] lg:overflow-auto pr-4">
             <div className="pb-6 lg:pr-10 h-[38%] items-center justify-center hidden lg:flex">
               <Pie data={data} />
             </div>
