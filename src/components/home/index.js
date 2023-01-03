@@ -95,8 +95,8 @@ export const Home = ({
                 <p className="text-slate-400">‣ {item.id}</p>
                 <p>{item.nome} ({item.carga_horaria}h)</p>
               </div>
-              <button className="h-6 w-6" onClick={onDeleteDisciplina(item.id)}>
-                <TrashIcon className="text-slate-700 hover:text-slate-600" />
+              <button className="h-4 w-4" onClick={onDeleteDisciplina(item.id)}>
+                <TrashIcon className="h-4 w-4 text-slate-700 hover:text-slate-600" />
               </button>
             </div>
           ))}
