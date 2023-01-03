@@ -6,6 +6,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
 import { Pie } from "react-chartjs-2";
+import { Collapse } from "antd";
 
 ChartJS.register(ArcElement, Tooltip);
 
@@ -23,8 +24,9 @@ const CARGA_HORARIA_NAMES = [
 export const Home = ({
   cargaHorariaRestante,
   selectedOptions,
+  disciplinasRestantes,
   onDeleteDisciplina,
-	onClear
+  onClear,
 }) => {
   const { height } = useWindowSize();
 
@@ -71,7 +73,12 @@ export const Home = ({
             <h2 className="text-3xl font-bold text-zinc-600 pb-4">
               Disciplinas
             </h2>
-            <button className="text-red-400 pb-3 hover:text-red-800" onClick={onClear}>Limpar tudo</button>
+            <button
+              className="text-red-400 pb-3 hover:text-red-800"
+              onClick={onClear}
+            >
+              Limpar tudo
+            </button>
           </div>
           {!selectedOptions.length && (
             <div className="pb-12 flex flex-col justify-center items-center text-slate-300 h-[90%]">
@@ -79,14 +86,14 @@ export const Home = ({
               Nenhuma disciplina selecionada
             </div>
           )}
-          {selectedOptions.map((item, index) => (
+          {selectedOptions.map((item) => (
             <div
-              key={`${item.id}-${index}`}
+              key={`${item.id}`}
               className="flex justify-between items-center pb-4 mb-4 border-b-2 border-dashed"
             >
               <div>
-                <p>Código: {item.id}</p>
-                <p>Nome: {item.nome}</p>
+                <p className="text-slate-400">‣ {item.id}</p>
+                <p>{item.nome} ({item.carga_horaria}h)</p>
               </div>
               <button className="h-6 w-6" onClick={onDeleteDisciplina(item.id)}>
                 <TrashIcon className="text-slate-700 hover:text-slate-600" />
@@ -97,26 +104,42 @@ export const Home = ({
         <div className="hidden absolute rounded-lg bg-[#F3F3F3] lg:block">
           <ArrowLongRightIcon className="text-green-600	h-20 w-28" />
         </div>
-        <div className="p-4 w-full lg:py-6 lg:pl-14 bg-slate-50	lg:w-[46%]	lg:h-full rounded-lg ">
-          <h2 className="text-3xl font-bold text-zinc-600">
+        <div className="p-4 pr-0 w-full lg:py-6 lg:pl-14 bg-slate-50	lg:w-[46%]	lg:h-full rounded-lg overflow-hidden">
+          <h2 className="text-3xl font-bold text-zinc-600 pb-6">
             Carga horária restante
           </h2>
-          <div className="my-6 lg:pr-10 h-[45%] flex items-center justify-center">
-            <Pie data={data} />
-          </div>
+          <div className="w-full h-[92%] overflow-auto pr-4">
+            <div className="pb-6 lg:pr-10 h-[38%] items-center justify-center hidden lg:flex">
+              <Pie data={data} />
+            </div>
 
-          <table>
-            {Object.values(cargaHorariaRestante).map((item, index) => (
-              <tbody key={index}>
-                <tr>
-                  <th className="text-left	">{CARGA_HORARIA_NAMES[index]}</th>
-                </tr>
-                <tr>
-                  <td>{item}h</td>
-                </tr>
-              </tbody>
-            ))}
-          </table>
+            <Collapse>
+              {Object.values(cargaHorariaRestante).map((item, index) => (
+                <Collapse.Panel
+                  header={
+                    <>
+                      <h3>{CARGA_HORARIA_NAMES[index]}</h3>
+                      <p>{item}h restantes</p>
+                    </>
+                  }
+                  className="text-left	"
+                  key={CARGA_HORARIA_NAMES[index]}
+                >
+                  <p className="font-bold pb-2">Disciplinas disponíveis</p>
+                  {disciplinasRestantes
+                    .filter(
+                      (item) =>
+                        item.eixo === Object.keys(cargaHorariaRestante)[index]
+                    )
+                    .map((item) => (
+                      <p key={item?.value}>
+                        • {item?.label} ({item?.cargaHoraria}h)
+                      </p>
+                    ))}
+                </Collapse.Panel>
+              ))}
+            </Collapse>
+          </div>
         </div>
       </div>
     </section>

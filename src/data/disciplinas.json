@@ -195,6 +195,12 @@
   ],
   "obrigatorias": [
     {
+      "id": "NONE",
+      "nome": "Não há Informação sobre este eixo curricular",
+      "carga_horaria": 240,
+      "eixo": "FC"
+    },
+    {
       "id": "FNSI",
       "nome": "FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO",
       "carga_horaria": 80,

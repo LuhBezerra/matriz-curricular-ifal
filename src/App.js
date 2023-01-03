@@ -21,11 +21,15 @@ function App() {
 
   const obrigatorias = disciplinas.obrigatorias.map((item) => ({
     value: item.id,
+    cargaHoraria: item.carga_horaria,
+    eixo: item.eixo,
     label: item.nome,
   }));
 
   const optativas = disciplinas.optativas.map((item) => ({
     value: item.id,
+    cargaHoraria: item.carga_horaria,
+    eixo: item.eixo,
     label: item.nome,
   }));
 
@@ -87,6 +91,7 @@ function App() {
         cargaHorariaRestante={cargaHorariaRestante}
         onDeleteDisciplina={onDeleteDisciplina}
         onClear={onClear}
+        disciplinasRestantes={filteredOptions}
       />
     </main>
   );
